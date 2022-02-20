@@ -64,7 +64,10 @@ function browserSync() {
 
 function html() {
   return src(path.src.html)
-    .pipe(fileinclude())
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
     .pipe(webphtml())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream())
@@ -109,7 +112,10 @@ function js() {
     path.src.js,
   ])
     .pipe(concat('script.js'))
-    .pipe(fileinclude())
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
     .pipe(dest(path.build.js))
     .pipe(uglify())
     .pipe(
@@ -223,4 +229,5 @@ exports.html = html;
 exports.build = build;
 exports.watch = watch;
 
-exports.default = gulp.parallel(html, css, images, js, browserSync, watchFiles);
+exports.default = watch;
+//exports.default = gulp.parallel(html, css, images, js, browserSync, watchFiles);
