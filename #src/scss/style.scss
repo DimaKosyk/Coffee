@@ -173,3 +173,61 @@
   }
 }
 
+.product{
+  padding: 140px 0;
+  &__title{
+    margin-bottom: 20px;
+  }
+  &__subtitle{
+    margin-bottom: 60px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    max-width: 370px;
+  }
+  &__item-img{
+    margin-bottom: 35px;
+  }
+  &__item-price{
+    font-size: 24px;
+    line-height: 150%;
+    color: #0c0c0c;
+    @extend %josefin-700;
+    margin-bottom: 10px;
+  }
+  &__item-name{
+    font-size: 32px;
+    line-height: 130%;
+    color: #000;
+    @extend %josefin-600;
+    margin-bottom: 15px;
+  }
+  &__item-descr{
+    max-width: 257px;
+    font-size: 16px;
+    line-height: 160%;
+    color: #000;
+    opacity: 0.6;
+    @extend %open-400;
+    margin-bottom: 30px;
+  }
+  &__item-num{
+    max-width: 114px;
+  }
+  &__item-btn{
+    padding: 15px 30px;
+    background-color: #FF4B32;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    line-height: 150%;
+    color: #fff;
+  }
+}
+
