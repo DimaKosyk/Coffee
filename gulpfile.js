@@ -104,9 +104,11 @@ function js() {
   return src([
 
     './node_modules/jquery/dist/jquery.js',
+    './node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+    //'./node_modules/swiper/swiper-bundle.js',
     // './node_modules/mixitup/dist/mixitup.js',
     // './node_modules/rateyo/src/jquery.rateyo.js',
-    //'./node_modules/slick-carousel/slick/slick.js',
+    './node_modules/slick-carousel/slick/slick.js',
 
 
     path.src.js,
@@ -229,5 +231,5 @@ exports.html = html;
 exports.build = build;
 exports.watch = watch;
 
-exports.default = watch;
-//exports.default = gulp.parallel(html, css, images, js, browserSync, watchFiles);
+//exports.default = watch;
+exports.default = gulp.parallel(html, css, images, js, browserSync, watchFiles);
