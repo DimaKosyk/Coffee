@@ -48,11 +48,13 @@
     color: #fff;
     opacity: 0.6;
     text-decoration: none;
+    transition: all 0.3s;
   }
   &__menu-link:hover{
     @extend %open-700;
     color: #FF4B32;
     opacity: none;
+    transition: all 0.3s;
   }
   &__nav{
     margin-left: 60px;
@@ -249,6 +251,7 @@
     border-radius: 50%;
     cursor: pointer;
     opacity: 0.6;
+    transition: all 0.3s;
   }
   .slider-btn svg{
     position: absolute;
@@ -265,6 +268,7 @@
     right: 0;
   }
   .slider-btn:hover{
+    transition: all 0.3s;
     opacity: 1;
   }
 }
@@ -427,7 +431,7 @@
     font-size: 43px;
     line-height: 130%;
     color: #FFFFFF;
-    @extend %open-600;
+    @extend %josefin-600;
   }
   &__tel,
   &__mail{
@@ -457,6 +461,59 @@
     width: 17px;
     height: 14px;
     margin-right: 15px;
+  }
+}
+
+.blog{
+  padding: 140px 0;
+  &__title{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__subtitle{
+    width: 610px;
+    text-align: center;
+    margin: 0 auto 60px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item{
+    box-shadow: 40px 15px 136px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+  }
+  &__content{
+    padding: 30px;
+  }
+  &__item-title{
+    font-size: 32px;
+    line-height: 130%;
+    @extend %josefin-600;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  &__item-text{
+    max-width: 300px;
+    font-size: 16px;
+    line-height: 160%;
+    @extend %open-400;
+    opacity: 0.7;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  &__link{
+    display: flex;
+    align-items: center;
+    max-width: 115px;
+  }
+  &__link-text{
+    font-size: 16px;
+    line-height: 160%;
+    color: #FF4B32;
+    @extend %open-600;
+    margin-right: 10px;
   }
 }
 
